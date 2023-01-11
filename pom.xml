@@ -59,6 +59,18 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<image>
+						<name>ngagne0303/${project.artifactId}:${project.version}</name>
+					</image>
+					<docker>
+						<publishRegistry>
+							<!--suppress UnresolvedMavenProperty -->
+							<username>${docker.user}</username>
+							<!--suppress UnresolvedMavenProperty -->
+							<password>${docker.token}</password>
+							<url>https://index.docker.io/v1</url>
+						</publishRegistry>
+					</docker>
 				</configuration>
 			</plugin>
 		</plugins>
